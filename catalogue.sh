@@ -3,6 +3,9 @@
 source ./common.sh
 app_name=catalogue
 
+check_root
+nodejs_setup
+
 dnf module disable nodejs -y &>>$LOG_FILE
 VALIDATE $? "Disabling default nodejs"
 
